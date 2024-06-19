@@ -15,7 +15,10 @@ def read_slide_switch():
                 GPIO.output(24, 0)
                 time.sleep(0.1) 
             else:
+                GPIO.output(24, 1)
+                time.sleep(0.05)
                 GPIO.output(24, 0)
+                time.sleep(0.05) 
 def main():
     init()
     read_slide_switch()
